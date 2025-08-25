@@ -24,11 +24,32 @@ function CategorySlider() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 7,
+        slidesToShow: 7, 
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 1000,
-    };
+        autoplaySpeed: 2000,
+        responsive: [
+            {
+            breakpoint: 1024, 
+            settings: {
+                slidesToShow: 4,
+            }
+            },
+            {
+            breakpoint: 768, 
+            settings: {
+                slidesToShow: 2,
+            }
+            },
+            {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+            }
+            }
+        ]
+};
+
 
     return (
         <>
@@ -36,8 +57,12 @@ function CategorySlider() {
         {categories.map((category) => {
             return (
                 <div key={category?._id}>
-                    <img src={category.image} className='w-full h-[200px] object-cover' alt={category.name} />
-                    <h3 className='text-center mt-2'>{category.name}</h3>
+                    <img 
+                        src={category.image} 
+                        className="w-full h-[150px] object-contain mx-auto" 
+                        alt={category.name} 
+                    />
+                    <h3 className="text-center mt-2 text-sm sm:text-base truncate">{category.name}</h3>
                 </div>
             )
         })}
