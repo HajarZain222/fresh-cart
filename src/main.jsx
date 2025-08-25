@@ -11,6 +11,7 @@ import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
 import CartContextProvider from './Context/CartContext.jsx';
 import { Toaster } from 'react-hot-toast';
 import WishlistContextProvider from './Context/WishlistContext.jsx';
+import { Online } from 'react-detect-offline';
 
 const client = new QueryClient()
   
@@ -27,5 +28,6 @@ createRoot(document.getElementById('root')).render(
         </CartContextProvider>
       </UserContextProvider>
     </QueryClientProvider>
-  </StrictMode>,
+  </StrictMode>
 )
+
