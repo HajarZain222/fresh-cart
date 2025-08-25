@@ -24,31 +24,37 @@ function CategorySlider() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 7, 
+        slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 2000,
         responsive: [
             {
-            breakpoint: 1024, 
+            breakpoint: 1024, // أقل من 1024px
             settings: {
                 slidesToShow: 4,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
             }
             },
             {
-            breakpoint: 768, 
+            breakpoint: 768, // أقل من 768px
             settings: {
                 slidesToShow: 2,
+                slidesToScroll: 1
             }
             },
             {
-            breakpoint: 480,
+            breakpoint: 480, // أقل من 480px
             settings: {
                 slidesToShow: 1,
+                slidesToScroll: 1
             }
             }
         ]
-};
+    };
+
 
 
     return (
