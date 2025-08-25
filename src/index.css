@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer components {
+    .btn-green {
+        @apply w-fit border border-1 border-green-600 rounded-md px-3 py-2 mt-2 bg-green-600 hover:bg-green-700 text-white  transition-all duration-500 cursor-pointer;
+    }
+
+    .btn-red {
+        @apply w-fit border border-1 border-red-500 rounded-md px-3 py-2 mt-2 bg-red-500 hover:bg-red-800 text-white transition-all duration-500 cursor-pointer;
+    }
+
+    .input {
+        @apply flex-1 bg-white border border-1 border-zinc-300 rounded-md px-5 py-2 mt-2 outline-none dark:border-zinc-600 rounded-lg focus:outline-none focus:ring-1 focus:ring-green-600;
+    }
+
+    .title {
+        @apply text-center text-3xl font-bold text-green-600 mt-5 mb-5;
+    }
+
+    .container {
+        @apply max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+}
