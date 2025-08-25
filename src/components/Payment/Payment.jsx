@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Style from './Payment.module.css'
-import { baseUrl } from '../../utils/baseUrl'
+import { baseUrl, baseUrlFrontend } from '../../utils/baseUrl'
 import { useFormik } from 'formik'
 import axios from 'axios'
 import { CartContext } from '../../Context/CartContext'
@@ -43,7 +43,7 @@ function Payment() {
                 token: token
             },
             params: {
-                url: "http://localhost:5173"
+                url: baseUrlFrontend
             }
             })
             .then((res) => {
