@@ -1,3 +1,3 @@
 export const baseUrl = "https://ecommerce.routemisr.com/api/v1";
 
-export const baseUrlFrontend = "https://fresh-cart.vercel.app";
+export const baseUrlFrontend = "https://fresh-cart-bay-six.vercel.app";
