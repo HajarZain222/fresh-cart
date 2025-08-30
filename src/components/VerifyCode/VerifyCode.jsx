@@ -20,6 +20,11 @@ function VerifyCode() {
     }
 
     return (
+        <>
+        <Helmet>
+            <title>Verify Code</title>
+        </Helmet>
+        
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <h2 className="title">Enter Reset Code</h2>
         <input
@@ -34,6 +39,7 @@ function VerifyCode() {
         </button>
         {error && <p className="text-red-500 text-center mt-2">{error}</p>}
         </form>
+        </>
     );
 }
 

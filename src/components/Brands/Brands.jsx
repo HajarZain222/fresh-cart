@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { Link } from 'react-router-dom'
 import { ClipLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 function Brands() {
     function getBrands() {
         return axios.get(`${baseUrl}/brands`)
@@ -39,6 +40,10 @@ function Brands() {
 
     return (
         <>
+        <Helmet>
+            <title>Brands</title>
+        </Helmet>
+        
         {brands?.length > 0 && (
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 pt-5">
                 {brands.map((brand) => {

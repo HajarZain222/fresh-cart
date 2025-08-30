@@ -4,6 +4,7 @@ import { baseUrl } from '../../utils/baseUrl'
 import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { ClipLoader } from 'react-spinners'
+import { Helmet } from 'react-helmet'
 
 function AllOrders() {
     const token = localStorage.getItem("token");
@@ -48,6 +49,10 @@ function AllOrders() {
 
     return (
         <>
+        <Helmet>
+            <title>All Orders</title>
+        </Helmet>
+        
         {orders.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 pt-10">
             {[...orders]

@@ -6,6 +6,7 @@ import { ClipLoader } from 'react-spinners';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../Context/CartContext';
 import toast from 'react-hot-toast';
+import { Helmet } from 'react-helmet';
 function WishList() {
     let { getWishlist, deleteFromWishlist } = useContext(WishlistContext);
     let {addToCart} = useContext(CartContext)
@@ -40,6 +41,10 @@ function WishList() {
 
     return (
         <>
+        <Helmet>
+            <title>WishList</title>
+        </Helmet>
+        
         {wishlistData.length > 0 ? (
             <>
             <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 pt-5">

@@ -7,6 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { UserContext } from "../../Context/UserContext";
 import { jwtDecode } from "jwt-decode";
+import { Helmet } from "react-helmet";
 
 
 function Login() {
@@ -67,6 +68,10 @@ function Login() {
 
     return (
         <>
+        <Helmet>
+            <title>Login</title>
+        </Helmet>
+        
         {errorApi && (
             <div
             className="p-4 my-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"

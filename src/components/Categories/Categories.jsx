@@ -5,6 +5,7 @@ import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { ClipLoader } from 'react-spinners';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 function Categories() {
 
     function getBrands() {
@@ -40,6 +41,9 @@ function Categories() {
 
     return (
         <>
+        <Helmet>
+            <title>Categories</title>
+        </Helmet>
         {categories?.length > 0 && (
             <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-5 pt-5">
                 {categories.map((category) => {

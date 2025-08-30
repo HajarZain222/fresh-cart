@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { baseUrl } from "../../utils/baseUrl";
+import { Helmet } from "react-helmet";
 
 function ForgotPassword() {
     const [email, setEmail] = useState("");
@@ -22,6 +23,10 @@ function ForgotPassword() {
     }
 
     return (
+        <>
+        <Helmet>
+            <title>Forgot Password</title>
+        </Helmet>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
         <h2 className="title">Forgot Password</h2>
         <input
@@ -36,6 +41,7 @@ function ForgotPassword() {
         </button>
         {message && <p className="mt-2 text-center">{message}</p>}
         </form>
+        </>
     );
 }
 

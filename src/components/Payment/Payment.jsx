@@ -5,6 +5,7 @@ import { useFormik } from 'formik'
 import axios from 'axios'
 import { CartContext } from '../../Context/CartContext'
 import { useNavigate } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 function Payment() {
 
     const navigate = useNavigate()
@@ -74,6 +75,10 @@ function Payment() {
 
     return (
         <>
+        <Helmet>
+            <title>Payment</title>
+        </Helmet>
+        
         <form onSubmit={formikPayment.handleSubmit} className="max-w-xl mx-auto pt-10">
             <div className="relative z-0 w-full mb-5 group">
                 <input 

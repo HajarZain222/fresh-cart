@@ -6,6 +6,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import { UserContext } from '../../Context/UserContext';
+import { Helmet } from 'react-helmet';
 function Register() {
     const {setToken} = useContext(UserContext)
     const [errorApi, setErrorApi] = useState(null)
@@ -60,6 +61,10 @@ function Register() {
 
     return (
         <>
+        <Helmet>
+            <title>Register</title>
+        </Helmet>
+        
         {errorApi 
             ?
             <div 

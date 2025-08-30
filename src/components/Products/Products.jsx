@@ -8,6 +8,7 @@ import { useQuery } from '@tanstack/react-query'
 import { CartContext } from '../../Context/CartContext'
 import toast from 'react-hot-toast'
 import { WishlistContext } from '../../Context/WishlistContext'
+import { Helmet } from 'react-helmet'
 
 function Products() {
 
@@ -68,6 +69,10 @@ function Products() {
     
     return (
         <>
+        <Helmet>
+            <title>Products</title>
+        </Helmet>
+        
         {products.length > 0 && (
             <div className="grid lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-5 pt-5">
                 {products.map((product) => {

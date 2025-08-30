@@ -30,7 +30,7 @@ function CategorySlider() {
         autoplaySpeed: 2000,
         responsive: [
             {
-            breakpoint: 1024, // أقل من 1024px
+            breakpoint: 1024,
             settings: {
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -39,14 +39,14 @@ function CategorySlider() {
             }
             },
             {
-            breakpoint: 768, // أقل من 768px
+            breakpoint: 768, 
             settings: {
                 slidesToShow: 2,
                 slidesToScroll: 1
             }
             },
             {
-            breakpoint: 480, // أقل من 480px
+            breakpoint: 480, 
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1
@@ -54,7 +54,6 @@ function CategorySlider() {
             }
         ]
     };
-
 
 
     return (

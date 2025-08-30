@@ -3,6 +3,7 @@ import Style from './ResetPassword.module.css'
 import axios from "axios";
 import { baseUrl } from "../../utils/baseUrl";
 import { useNavigate } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 function ResetPassword() {
     const [email, setEmail] = useState("");
@@ -28,6 +29,11 @@ function ResetPassword() {
     }
 
     return (
+        <>
+        <Helmet>
+            <title>Reset Password</title>
+        </Helmet>
+        
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <h2 className="title">Reset Password</h2>
             <input
@@ -56,6 +62,7 @@ function ResetPassword() {
             </button>
             {error && <p className="text-red-500 text-center mt-2">{error}</p>}
         </form>
+        </>
     );
 }
 
